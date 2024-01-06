@@ -1,0 +1,95 @@
+Terminology
+-----------------------------------------------------------------------
+1. Root -> Topmost Node
+
+2. Parent-> Node which connects to the child
+
+3. Child -> Node which connects by the another node is its Child
+
+4. Leaf/External node -> Node with no children
+
+5. Internal node -> Node with atleast one child
+
+6. Depth -> Depth of the node is the no. of edges from the root node
+
+7. Height: No of edges from the node to the deapest leaf.
+
+8. Siblings -> Nodes belonging to the same parents.
+
+9.Ancestors -> Every node including parent and parent of the parent.
+
+10. Descendants -> Every child of the node and child of child.
+
+
+11. Degree ->No of children of the node
+
+12. Binary tree-> Degree of every of the tree is atmost 2 is a Binary tree.
+
+13. Use of Tree : Representing hierarchical Data
+
+
+-----------------------------------------------------------------------
+
+Types of Binary Tree
+-----------------------------------------------------------------------
+i)  Full/Strict binary tree: -> All nodes have either 2 or 0 children. 
+
+ii) Perfect Binary Tree: -> All internal node having exact two children and having all leaf nodes are on same level.
+
+iii) Complete Binary Tree: ->All levels are completely filled except possibly the last level and last level must have node align to left side.
+
+iv) Degenerate tree: -> Every parent node have exactly one child
+
+v) Skewed trees: -> All children of 'left skewed tree' are towards left and all children of 'right skewed tree' are towards the right.
+-----------------------------------------------------------------------
+
+Binary Search Tree
+-----------------------------------------------------------------------
+1. All node of left subtree are lesser
+2. All node of right subtree are greater
+3. Left & right subtree are also Binary Search Tree
+4. There are no duplicate nodes in the tree
+5. Inorder traversal of BST gives an ascending sorted array. 
+-----------------------------------------------------------------------
+
+AVL tree
+-----------------------------------------------------------------------
+# Need Of AVL trees:
+***********************************************************************
+1. Almost all operations in a BST are of order O(h) where h is the height of the tree
+2. If we don't plan our tree properly, this height can get as hight as n where n is the number of nodes in a BST(skewed tree).
+3. To guarantee an upper bound of O(log n) for all these operations, we used balanced trees.
+***********************************************************************
+
+AVL tree is:
+***********************************************************************
+1. Height balanced BST.
+2. Height difference between heights of left and right subtrees for every node is less than or equal to 1.
+3. Balanced factor = Height of right subtrees - Height of left subtrees
+  ________________________________________________________
+> |can be -1, 0, or 1 for a node to be balanced in a BST.|
+> |can be -1, 0, or 1 for all nodes of an AVL tree       |
+  |______________________________________________________|
+***********************************************************************
+
+Types of rotation:
+***********************************************************************
+
+1. LL rotation
+2. RR rotation
+3. LR rotation
+4. RL rotation
+***********************************************************************
+We can perform rotate operations to balance a BST such that the newly formed tree satisfies all the properties of a BST. Following are two basic rotate operations:
+1. Left Rotate wrt a node - Node is moved towards the left.
+2. Right Rotate wrt a node - Node is moved towards the right.
+
+Inorder to balance an AVL tree after insertion, we can follow the following rules:
+1. For a Left-Left Insertion - Right rotate once wrt the `First imbalanced` node.
+2. For a right-right Insertion - Left rotate once wrt the `First imbalanced` node.
+3. For a Left-Right Insertion - Left rotate once and then Right rotate once.
+4. For a Right-Left Insertion - Right rotate once and then Left rotate once.
+-----------------------------------------------------------------------
+
+
+
